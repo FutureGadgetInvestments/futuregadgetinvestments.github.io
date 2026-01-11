@@ -2,10 +2,7 @@ backend:
   name: github
   repo: FutureGadgetInvestments/futuregadgetinvestments.github.io
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
-local_backend: true
 
 media_folder: 'assets/uploads'
 public_folder: '/assets/uploads'
