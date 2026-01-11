@@ -26,6 +26,7 @@ navbar-links:
     - Cash Flow Wallet (Green) : "/wallets/cash_flow/"
   Closed: "/closed/"
   Research: "/research/"
+  Admin: "/admin/"
 
 
 ################

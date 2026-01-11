@@ -5,7 +5,9 @@
       "Bash(ls:*)",
       "Bash(bundle exec jekyll serve:*)",
       "Bash(git mv:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(netstat:*)",
+      "Bash(curl:*)"
     ]
   }
 }

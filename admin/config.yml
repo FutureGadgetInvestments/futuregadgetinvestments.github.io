@@ -1,13 +1,87 @@
-# config.yml
-
 backend:
-  name: git
-  repository: FutureGadgetInvestments/futuregadgetinvestments.github.io
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  repo: FutureGadgetInvestments/futuregadgetinvestments.github.io
+  branch: main
+
 media_folder: 'assets/uploads'
+public_folder: '/assets/uploads'
+
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'primary-wallet'
+    label: 'Primary Wallet (Black)'
     folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    filter: { field: 'tags', value: 'primary-wallet' }
     fields:
-      - { name: Title }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['primary-wallet'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'cash-flow-wallet'
+    label: 'Cash Flow Wallet (Green)'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    filter: { field: 'tags', value: 'cash-flow-wallet' }
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['cash-flow-wallet'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'closed'
+    label: 'Closed Positions'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    filter: { field: 'tags', value: 'closed' }
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['closed'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'research'
+    label: 'Research'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    filter: { field: 'tags', value: 'research' }
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['research'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'blog'
+    label: 'All Posts'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'list', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
