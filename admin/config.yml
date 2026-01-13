@@ -1,0 +1,94 @@
+backend:
+  name: github
+  repo: FutureGadgetInvestments/futuregadgetinvestments.github.io
+  base_url: https://sveltia-cms-auth.himynameisfil.workers.dev
+
+media_folder: '/assets/img'
+public_folder: '/assets/img'
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demopublickey
+
+collections:
+  - name: 'homepage'
+    label: 'Homepage'
+    files:
+      - label: 'Home Page'
+        name: 'index'
+        file: 'index.html'
+        fields:
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+
+  - name: 'primary-wallet'
+    label: 'Primary Wallet (Black)'
+    folder: '_posts/wallets/primary/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    media_folder: '/assets/img/primary'
+    public_folder: '/assets/img/primary'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['primary-wallet'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'cash-flow-wallet'
+    label: 'Cash Flow Wallet (Green)'
+    folder: '_posts/wallets/cash_flow/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    media_folder: '/assets/img/cash_flow'
+    public_folder: '/assets/img/cash_flow'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['cash-flow-wallet'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'closed'
+    label: 'Closed Positions'
+    folder: '_posts/closed/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    media_folder: '/assets/img/closed'
+    public_folder: '/assets/img/closed'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['closed'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'research'
+    label: 'Research'
+    folder: '_posts/research/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    media_folder: '/assets/img/research'
+    public_folder: '/assets/img/research'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'cover-img', widget: 'image', required: false }
+      - { label: 'Thumbnail', name: 'thumbnail-img', widget: 'image', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'hidden', default: ['research'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
