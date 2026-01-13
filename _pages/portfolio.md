@@ -23,6 +23,8 @@ Income-generating investments focused on generating cash flow.
 
 ### Portfolio Performance
 
+[View Source Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW4--3KMPl6vSJGFY4BdzNxJgbZFMPnfGYSqS7AEox19YzmYQGo5wvKHupYOS1vTO2J6F6oksqzry/pub?gid=1440929963&single=true)
+
 <div id="portfolio-table-container">
   <p>Loading portfolio data...</p>
 </div>
